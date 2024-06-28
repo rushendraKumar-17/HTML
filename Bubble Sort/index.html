@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="sorting">
+                <!-- <div class="values" style="--h:5vw">5</div>
+                <div class="values" style="--h:3vw">3</div>
+                <div class="values" style="--h:7vw">7</div>
+                <div class="values" style="--h:2vw">2</div>
+                <div class="values" style="--h:1vw">1</div> -->
+            </div>
+            <hr>
+        </div>
+        <div class="info">
+            <input type="text" placeholder="Enter the values seperated by comma" id="input">
+            <button id="start">Start</button>
+        </div>
+    </div>
+    <div class="algorithm">
+        <div class="arrow">-></div>
+        <pre>for(int i=0;i < arr.length;i++){
+    for(int j=0;j < arr.length-i;j++){
+        if(arr[i] > arr[j]){
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }       
+}    
+        </pre>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

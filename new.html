@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-width: 100vw;
+        background-color: black;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .word {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        background-color: rgb(255, 0, 128);
+        position: absolute;
+        left: 9vw;
+        border: 1px solid black;
+      }
+      .shadow {
+        width: 3vw;
+        height: 3vw;
+        background-color: rgb(255, 0, 157);
+        border-radius: 30%;
+        position: absolute;
+        opacity: calc(var(--op) * 0.1);
+        left: calc(var(--op) * 1vw);
+      }
+      .trail {
+        top: 20px;
+        position: absolute;
+        left: 20vw;
+        /* transform: rotate(30deg); */
+        animation: move 5s 0s infinite;
+      }
+      @keyframes move {
+        0%{
+            left: 0vw;
+
+        }
+        100%{
+            left: 110vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="trail">
+        <div class="shadow" style="--op: 0.5"></div>
+        <div class="shadow" style="--op: 1"></div>
+        <div class="shadow" style="--op: 1.5"></div>
+        <div class="shadow" style="--op: 2"></div>
+        <div class="shadow" style="--op: 2.5"></div>
+        <div class="shadow" style="--op: 3"></div>
+        <div class="shadow" style="--op: 3.5"></div>
+        <div class="shadow" style="--op: 4"></div>
+        <div class="shadow" style="--op: 4.5"></div>
+        <div class="shadow" style="--op: 5"></div>
+        <div class="shadow" style="--op: 5.6"></div>
+        <div class="shadow" style="--op: 6"></div>
+        <div class="shadow" style="--op: 6.5"></div>
+        <div class="shadow" style="--op: 7"></div>
+        <div class="shadow" style="--op: 7.5"></div>
+        <div class="shadow" style="--op: 8"></div>
+        <div class="word"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    
+  </script>
+</html>

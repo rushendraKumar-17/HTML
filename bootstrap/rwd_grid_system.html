@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RWD</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+	<style type="">
+		.myContainer{
+			width: 94%;
+			border: 3px solid red;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+
+	<h1 class="text-center text-decoration-underline my-3">Container CLasses </h1>
+	<!--This below div tag  with a styling with class selector -->
+	<div class="myContainer">
+		I am div tag without bootstrap styling
+	</div>
+
+
+	<!-- This below div tag with bootstrap styling -->
+	<div class="container border border-4 my-4">
+		I am div tag with bootstrap Styling(containter class)
+	</div>
+
+
+	<!-- container-fluid class -->
+	<div class="container-fluid border border-4 border-primary my-5">
+		I am div tag with max-width:100% in all viewports(container-fluid class)
+	</div>
+
+
+	<!-- container-md class -->
+	<div class="container-md border border-4 border-primary my-5">
+		I am div tag with specified lengths upts md screen and below that I taken up total 100% width
+	</div>
+
+
+	<!-- container-lg class -->
+	<div class="container-lg  border border-4 border-primary my-5">
+		I am div tag with specified lengths upto lg screen and below that I taken up total 100% width
+	</div>
+
+
+	<!-- Note: there are some other class like container-xxl ,container-sm,container-xs -->
+
+
+	<h1 class="text-center text-decoration-underline my-3">Grid System </h1>
+
+
+	<br>
+	<p><b>Example1:</b>
+		The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent .container.
+	</p>
+	<div class="container border border-4">
+	  <div class="row">
+	    <div class="col border border-1" >
+	      Column
+	    </div>
+	    <div class="col border border-1">
+	      Column
+	    </div>
+	    <div class="col border border-1">
+	      Column
+	    </div>
+	  </div>
+	</div>
+
+
+	<br>
+
+	<p>
+		<b>Setting one column width: </b>
+Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+	</p>
+
+	<p>Example1: </p>
+	<div class="container border border-4 border-primary my-5">
+		  
+		<div class="row">
+		    <div class="col-8 border border-1 border-primary">col-8</div>
+		    <div class="col-4 border border-1 border-primary">col-4</div>
+	    	
+		</div>
+	</div>
+	<p>Example2: </p>
+	<div class="container border border-4 border-primary my-5">
+		<div class="row">
+			<div class="col-4 border border-primary">
+				I am the column of row with width equal to <b> 4 base columns</b> of a grid
+			</div>
+			<div class="col-3 border border-primary">
+				I am the column of row with width equal to <b>3 base columns</b> of a grid
+			</div>
+			<div class="col-5 border border-primary">
+				I am the column of row with width equal to <b>5 base columns</b> of a grid
+			</div>
+		</div>
+	</div>
+
+	<p>What happens when the no of columns exceeds the 12 Columns</p>
+	<div class="container border border-4 border-warning my-5">
+			<div class="row">
+				<div class="col-4 border border-primary">
+				I am the column of row with width equal to <b> 4 base columns</b> of a grid
+			</div>
+			<div class="col-3 border border-primary">
+				I am the column of row with width equal to <b>3 base columns</b> of a grid
+			</div>
+			<div class="col-8 border border-primary">
+				I am the column of row with width equal to <b>8 base columns</b> of a grid
+			</div>
+			</div>
+	</div>
+
+
+	<h1>Responsive classes</h1>
+	<p>
+Bootstrap’s grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+
+</p>
+
+	<div class="container my-5 bg-success text-white">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+	  <div class="row">
+		    <div class="col-md-8 border border-1 border-dark">.col-md-8</div>
+		    <div class="col-6 col-md-4 border border-1 border-dark">.col-6 .col-md-4</div>
+	  </div>
+
+	  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+	  <div class="row ">
+	    <div class="col-6 col-md-4 border border-1 border-dark">.col-6 .col-md-4</div>
+	    <div class="col-6 col-md-4 border border-1 border-dark">.col-6 .col-md-4</div>
+	    <div class="col-6 col-md-4 border border-1 border-dark">.col-6 .col-md-4</div>
+	  </div>
+
+	  <!-- Columns are always 50% wide, on mobile and desktop -->
+	  <div class="row">
+	    <div class="col-6 border border-1 border-dark">.col-6</div>
+	    <div class="col-6 border border-1 border-dark">.col-6</div>
+	  </div>
+	</div>
+
+
+	<!-- Practical Use -->
+	<div class="container border border-4 bg-success text-white border-warning my-5">
+		<div class="row">
+			<div class="col-md-2 border border-2 border-primary">
+				Side Bar
+			</div>
+			<div class="col-md-8 border border-2 border-primary">
+				<h1>Some text</h1>
+				<p>
+					rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="col-md-2 border border-2 border-primary">
+				Side Bar
+			</div>
+		</div>
+	</div>
+
+
+	<h1>Buttons</h1>
+		<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-dark">Dark</button>
+
+	<button type="button" class="btn btn-link">Link</button>
+
+	<br><br>
+	<h1>Outline buttons</h1>
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+	<br><br>
+
+
+	<h1>Sizes of the buttton</h1>
+	<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+	<br>
+	<br>
+
+	<h1>Button group</h1>
+			<div class="btn-group" role="group" aria-label="Basic example">
+		  <button type="button" class="btn btn-primary">Left</button>
+		  <button type="button" class="btn btn-primary">Middle</button>
+		  <button type="button" class="btn btn-primary">Right</button>
+		</div>
+<br><br>		<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-danger">Left</button>
+  <button type="button" class="btn btn-warning">Middle</button>
+  <button type="button" class="btn btn-success">Right</button>
+</div>
+	<br><br>
+
+	<h1>Cards</h1>
+	<div class="card my-3 mx-5 border-4 border-primary" style="width: 18rem;">
+  <img src="/home/rguktrkvalley/Pictures/wp3988132-dhoni-wallpapers (copy).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+    	Satheesh is a good boy
+    	<br>
+    	The Man,The Myth,The Legend
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<br><br>
+<h1>List group</h1>
+<ul class="list-group">
+	  <li class="list-group-item border-2 border-primary">An item</li>
+	  <li class="list-group-item border-2 border-primary">A second item</li>
+	  <li class="list-group-item border-2 border-primary">A third item</li>
+	  <li class="list-group-item border-2 border-primary">A fourth item</li>
+	  <li class="list-group-item border-2 border-primary">And a fifth one</li>
+</ul>
+
+<!-- User Inputs -->
+	<h1>Forms</h1>
+	<form action="/action_page.php">
+	  <div class="form-group">
+	    <label for="email">Email address:</label>
+	    <input type="email" class="form-control" id="email">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Password:</label>
+	    <input type="password" class="form-control" id="pwd">
+	  </div>
+	  <div class="checkbox">
+	    <label><input type="checkbox"> Remember me</label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</body>
+</html>

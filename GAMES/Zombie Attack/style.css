@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameArea{
+    width: 100vw;
+    height: 100vh;
+    margin:auto;
+    background: url(images/background.jpg);
+    background-size: cover;
+    background-color: rgb(62, 222, 250);
+    position: relative;
+}
+.alien{
+    background-color: green;
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    background:url(images/1c.gif);
+    background-size: cover;
+    background-position: center;
+}
+.score{
+    position: absolute;
+    width: 6vw;
+    height: 3vw;
+    background-color: transparent;
+    z-index: 3;
+    left: 1vw;
+    top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    color: white;
+}
+.lost{
+    position: absolute;
+    width: 60vw;
+    height: 30vw;
+    background-color: orange;
+    z-index: 2;
+    left: 20vw;
+    top: 10vh;
+    display: none;
+}
+.lost p{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 2vw;
+    color: rgb(216, 231, 245);
+}
+.lost button{
+    width: 10vw;
+    height: 4vw;
+    font-size: 2vw;
+    margin: 3vw 0vw 0vw 24vw;
+
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition-duration: 0.1s;
+      }
+      .first {
+        position: absolute;
+        background-color: black;
+        width: 28vw;
+        height: 15vh;
+        left: 40vw;
+        top: 69vh;
+        transform: rotate(-2.4deg);
+        /* border: 1px solid white; */
+        border-radius: 50%;
+        z-index: 2;
+        transition-duration:0.2s;
+      }
+      
+      .ear1 {
+        position: absolute;
+        width: 20vw;
+        height: 30vh;
+        top: 6vh;
+        left: 30vw;
+        background-color: black;
+        /* border: 1px solid white; */
+        transform: rotate(45deg);
+        border-radius: 20vh;
+        z-index: 0;
+      }
+      .ear2 {
+        position: absolute;
+        width: 20vw;
+        height: 30vh;
+        top: 6vh;
+        left: 50vw;
+        background-color: black;
+        transform: rotate(-45deg);
+        border-radius: 50%;
+        z-index: 0;
+        /* border: 1px solid white; */
+      }
+      #audio{
+        position: absolute;
+        display: none;
+      }
+      .inner1 {
+        z-index: 0.1;
+        position: absolute;
+        width: 15vw;
+        height: 23vh;
+        top: 7vh;
+        left: 31vw;
+        background-color: rgb(167, 162, 162);
+        /* border: 1px solid white; */
+        transform: rotate(49deg);
+        border-radius: 20vh;
+      }
+      .second {
+        background-color: rgb(160, 157, 157);
+        border: 1px solid black;
+        position: absolute;
+        width: 30vh;
+        height: 15vh;
+        left: 43vw;
+        top: 70vh;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .hair{
+        position: absolute;
+        background-color: white;
+        width: 18vw;
+        height: 0.7vh;
+        z-index: 3;
+        transition-duration:0.2s;
+      }
+      .hair1{
+        top: 34vw;
+        left: 32vw;
+        width: 16vw;
+        transform: rotate(-5deg);
+      }
+      .hair2{
+        top: 36vw;
+        left: 35vw;
+        transform: rotate(-25deg);
+        width: 16vw;
+      }
+      .hair3{
+        top: 34vw;
+        left: 50vw;
+        transform: rotate(5deg);
+      }
+      .hair4{
+        top: 36.5vw;
+        left: 50vw;
+        transform: rotate(23deg);
+        width: 16vw;
+      }
+      .nose::border{
+        z-index: 5;
+      }
+      .nose {
+        position: absolute;
+        background-color: rgb(5, 5, 5);
+        width: 5vh;
+        height: 5vh;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 50px solid #555;
+        z-index: 3;
+        top: 64vh;
+        left: 48vw;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inner2 {
+        z-index: 0.1;
+        position: absolute;
+        width: 15vw;
+        height: 23vh;
+        top: 7vh;
+        left: 53.5vw;
+        background-color: rgb(177, 174, 174);
+        /* border: 1px solid white; */
+        transform: rotate(-49deg);
+        border-radius: 20vh;
+      }
+      .container {
+        width: 45vw;
+        height: 85vh;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8vh;
+        gap: 7vw;
+        border-radius: 49%;
+        z-index: 1;
+      }
+      .eye {
+        background-color: white;
+        width: 8vw;
+        height: 10vw;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .ball {
+        background-color: rgb(104, 100, 100);
+        position: absolute;
+        width: 1.7vw;
+        height: 2vw;
+        border-radius: 50%;
+        left: 5vh;
+        top: 3vh;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+    <div class="hair hair1"></div>
+    <div class="hair hair2"></div>
+    <div class="hair hair3"></div>
+    <div class="hair hair4"></div>
+    <div class="nose">></div>
+    <div class="mouth">
+      <div class="first"></div>
+      <div class="second"></div>
+    </div>
+    <div class="ear1"></div>
+    <div class="ear2"></div>
+    <div class="inner1"></div>
+    <div class="inner2"></div>
+    <audio src="cat.wav" controls id="audio"></audio>
+    <script>
+      let audio = document.querySelector("#audio");
+      let eyes = document.querySelectorAll(".eye");
+      let balls = document.querySelectorAll(".ball");
+      let container = document.querySelector(".container");
+      let hair1 =document.querySelector(".hair1");
+      let hair2 =document.querySelector(".hair2");
+      let hair3 = document.querySelector(".hair3");
+      let hair4=document.querySelector(".hair4");
+      let first = document.querySelector(".first");
+      container.onmouseenter=()=>{
+        console.log("Hey");
+        first.style.top=65+"vh";
+        hair1.style.top=32+"vw";
+        hair1.style.transform="rotate(9deg)";
+        hair2.style.top=34+"vw";
+        hair2.style.transform="rotate(0deg)"
+        hair3.style.top=32+"vw";
+        hair3.style.transform="rotate(-10deg)";
+        hair4.style.transform="rotate(0deg)";
+        hair4.style.top=34+"vw";
+        audio.play();
+      }
+      container.onmouseleave=()=>{
+        hair1.style.top=34+"vw";
+        first.style.top=68.5+"vh";
+        hair1.style.transform="rotate(-5deg)";
+        hair2.style.top=36+"vw";
+        hair2.style.transform="rotate(-25deg)";
+        hair3.style.top=34+"vw";
+        hair3.style.transform="rotate(5deg)";
+        hair4.style.transform="rotate(23deg)";
+        hair4.style.top=36+"vw";
+        audio.pause();
+      }
+      window.addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        // console.log(x);
+        balls.forEach((ball, ind) => {
+          if (x < 450) {
+            ball.style.left = 10 + "px";
+          } else if (x > 618 && x < 697) {
+            if (ind == 0) {
+              ball.style.left = 75 + "px";
+            } else {
+              ball.style.left = 10 + "px";
+            }
+          } else if (x > 697) {
+            ball.style.left = 65 + "px";
+          }
+
+          if (x > 540 && x < 570) {
+            if (ind == 0) {
+              ball.style.left = 35 + "px";
+            } else {
+              ball.style.left = 10 + "px";
+            }
+          }
+          if (y > 310) {
+            ball.style.top = 89 + "px";
+          } else if (y >= 161 && y <= 298) {
+            if (y >= 200 && y <= 298) {
+              ball.style.top = (y % 100) + 10 + "px";
+            } else {
+              ball.style.top = (y % 100) - 61 + "px";
+            }
+          } else if (y < 200) {
+            ball.style.top = 12 + "px";
+          }
+          // console.log(ball.style.left);
+        });
+        // 161,298,172
+      });
+    </script>
+  </body>
+</html>

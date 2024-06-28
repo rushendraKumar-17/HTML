@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition-duration: 0.5s; */
+}
+.sorting{
+    display: flex;
+    gap: 2vh;
+    align-items:end;
+    height: 40vh;
+    transition-duration: 0.3s;
+}
+.algorithm{
+    padding:0vh 5vh;
+    line-height: 5vh;
+    position: absolute;
+    right: 6vw;
+    top: 40vh;
+}
+.arrow{
+    position: absolute;
+    right: 26vw;
+    font-size: 3.6vh;
+}
+.container{
+    display: flex;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+.info input{
+    width: 25vw;
+    height: 6vh;
+    font-size: 2.5vh;
+}
+.info button{
+    width: 5vw;
+    height: 6vh;
+    font-size: 2.5vh;
+    margin-left: 2vh;
+}
+.main{
+    margin: 5vh 5vh;
+    background-color: violet;
+    width: 60vw;
+    height:60vh;
+    padding: 5vh;
+    
+}
+hr{
+    width: 0vw;
+}
+.values{
+    width: 2vw;
+    height: var(--h);
+    background-color: blue;
+    color: white;
+    text-align: center;
+    transition-duration: 0.5s;
+}

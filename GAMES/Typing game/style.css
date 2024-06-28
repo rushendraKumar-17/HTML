@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+.gameArea{
+    width: 70vw;
+    height: 90vh;
+    background-color: rgb(165, 208, 247);
+    overflow: hidden;
+}
+.sky{
+    width: 70vw;
+    height: 85vh;
+    overflow: hidden;
+    background-color: rgb(165, 208, 247);
+}
+.ground{
+    width: 70vw;
+    height: 5vh;
+    background-color: brown;
+}
+.letter{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2vw;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+}

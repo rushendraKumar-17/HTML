@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gameArea{
+    width: 95vh;
+    height: 95vh;
+    margin: auto;
+    margin-top: 2.5vh;
+    background-color: rgb(131, 172, 207);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    
+}
+.number{
+    /* z-index: 5; */
+}
+.snake1{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-color: transparent;
+    background-image: url(images/snake1-removebg-preview.png);
+    background-size: cover;
+    /* border: 1px solid black; */
+    left: 30vw;
+    top: 9.5vw;
+}
+.pawnArea{
+    width: auto;
+    height: auto;
+}
+.grid{
+    width: 9.5vh;
+    height: 9.5vh;
+    background-color: bisque;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.dice{
+    position: absolute;
+    left: 10vw;
+    top: 20vw;
+    width: 10vw;
+    height: 10vw;
+    background-color: white;
+    background-image: url(images/dice-game.gif);
+    background-size: cover;
+    border: 1px solid black;
+}
+.snake2{
+    position: absolute;
+    top: 10vw;
+    background-image: url(images/snake2-removebg-preview.png);
+    width: 25vw;
+    height: 30vw;
+    background-size:cover ;
+    left: 35vw;
+}
+.pawn{
+    position: absolute;
+    /* left: 30vw; */
+    /* top: 90vh; */
+    width: 3vh;
+    height:3vh;
+    background-image:url(images/pawn3.png) ;
+    background-size: cover;
+    z-index: 4;
+}

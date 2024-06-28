@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+      }
+      .pixel {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+      .controlPanel {
+        width: 100vw;
+        height: 5vw;
+        background-color: rgb(138, 252, 252);
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-left: 2vw;
+        gap: 4vh;
+      }
+      .eraser,
+      .pencil {
+        width: 5vw;
+        height: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(222, 183, 240);
+        border-radius: 20%;
+        border: 0.5px solid black;
+      }
+      .selected {
+        border: 2px solid black;
+        background-color: white;
+      }
+      .colorPanel {
+        width: 20vw;
+        height: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      }
+      .color {
+        width: 2vw;
+        height: 2vw;
+        background-color: var(--clr);
+        border: 1px solid black;
+        border-radius: 30%;
+      }
+      .paintArea {
+        width: 100vw;
+        height: 95vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controlPanel">
+      <div class="eraser selected">E</div>
+      <div class="pencil">P</div>
+      <div class="colorPanel">
+        <div class="color" style="--clr: red" id="red"></div>
+        <div class="color" style="--clr: blue" id="blue"></div>
+        <div class="color" style="--clr: green" id="green"></div>
+        <div class="color" style="--clr: yellow" id="yellow"></div>
+        <div class="color" style="--clr: black" id="black"></div>
+      </div>
+    </div>
+    <div class="paintArea"></div>
+  </body>
+  <script>
+    let paintArea = document.querySelector(".paintArea");
+    let currColor = "black";
+    let colors = document.querySelectorAll(".color");
+    colors.forEach((elem) => {
+      elem.addEventListener("dblclick", (e) => {
+        currColor = elem.getAttribute("id");
+      });
+    });
+
+    const draw = (i) => {
+      let p = document.createElement("div");
+      p.classList.add("pixel");
+      document.body.appendChild(p);
+      p.style.borderColor = currColor;
+      p.style.backgroundColor = currColor;
+      p.style.left = i.clientX + "px";
+      p.style.top = i.clientY + "px";
+      //   console.log("moving event");
+    };
+    const erase = (e) => {
+      console.log("erasing");
+      console.log(e.target);
+      if (e.target) {
+        document.body.removeChild(e.target);
+      }
+    };
+    let select = "pencil";
+    let eraser = document.querySelector(".eraser");
+    eraser.addEventListener("dblclick", (e) => {
+      e.preventDefault();
+      //   console.log("Clicked");
+      select = "eraser";
+    });
+    paintArea.addEventListener("mousedown", (e) => {
+      //   console.log("down event");
+      e.preventDefault();
+      if (select == "pencil") {
+        paintArea.addEventListener("mousemove", draw);
+      } else if (select == "eraser") {
+        paintArea.addEventListener("mousemove", erase);
+      }
+    });
+    paintArea.addEventListener("mouseup", (e) => {
+      paintArea.removeEventListener("mousemove", draw);
+    });
+  </script>
+</html>

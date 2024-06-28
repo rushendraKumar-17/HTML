@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fceff6;
+}
+.heading{
+    display: flex;
+    padding: 2vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #A1869E;
+    margin: 2vh;
+    height: 8vh;
+    color: white;
+    font-size: 3vh;
+}
+.image img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: white;
+}
+.name{
+    width: 14vw;
+    text-align: center;
+}
+.age{
+    text-align: center;
+    width: 5vw;
+}
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin: 2vh;
+    padding:1vh 2vh;
+    font-size: 3vh;
+    box-shadow: 0px 0px 1px 0.1px black ;
+    background-color: #f2f3f2;
+    border-radius: 2vh;
+    
+}
+.player:hover{
+    box-shadow: 0px 0px 4px 0.4px black;
+    cursor: pointer;
+    scale: 1.01;
+}
+.circle {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background: url("ball.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: 100;
+  }

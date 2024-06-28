@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 50vw;
+    height: 85vh;
+    background-color: turquoise;
+    margin:2vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.attempt{
+    width: 20vw;
+    height: 8vh;
+    font-size: 5vh;
+    letter-spacing: 1vh;
+    padding: 1vh;
+    text-align: center;
+}
+.wordContainer{
+    display: flex;
+    gap: 2vh;
+    margin:2vh auto;
+}
+.letter{
+    width: 6vh;
+    height: 6vh;
+    background-color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 5vh;
+}
+.unseen{
+    font-size: 0px;
+}
+.attempts{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin:2vh auto;
+    height: auto;
+}
+.trail{
+    font-size: 5vh;
+    /* position: absolute; */
+    /* top: 17.6vh; */
+    margin-left: 20px;
+}
+.invisible{
+    display: none;
+}
+.playAgain{
+    width: 15vw;
+    margin: 0px auto;
+    height: 5vh;
+}

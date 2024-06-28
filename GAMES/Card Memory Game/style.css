@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.gameArea{
+    background-color: rgb(243, 243, 56);
+    width: 53vw;
+    height: 80vh;
+    margin-top: -10vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+    padding: 5vh;
+}
+.stats{
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    gap: 10vh;
+    padding: 2vh;
+    font-size: 4vh;
+}
+.card{
+    width: 10vw;
+    height: 10.2vw;
+    background-color: white;
+    border-radius: 5%;
+    font-size: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/question.jpg);
+    /* transition-duration: 1s; */
+    transform: rotateY(180deg);
+    /* transition: background-image 1s; */
+    transition: transform 1s;
+    background-size: cover;
+}

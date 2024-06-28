@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="path/to/jquery.plugin.js"></script>
+     <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <p class="p">Sample text</p>
+    <div id="datepicker"></div>
+    <button class="ex">Click me</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //     $(".ex").click(function(){
+        //         $(this).hide();
+        //     })
+        //     $(".ex").hover(function(){
+        //         alert("Hey");
+        //     },
+        // function(){
+        //     alert("hi");
+        // })
+        //     $(".ex").on({"click":function(){
+        //         $("p").hide();
+        //     },
+        // "dblclick":function(){
+        //     $("p").show(1000);
+        // }})
+          $("#datepicker").datepicker();
+
+        $(".ex").click(function () {
+          // $('p').toggle(1000);
+          // $('p').fadeToggle(1000);
+          // $('p').fadeTo(1000,0.1)
+          // $("p").slideUp();
+          // $("p").slideToggle();
+          // $("p").animate({fontSize:"+=10px"},2000)
+          // alert($(".p").attr("class"))
+          // $(".p").html("<b>class</b>")
+          //         $(".p").text(function(index,origText){
+          //     return "Old text: " + origText + " New text: Hello world!(index: " +index + ")";
+          //   });
+          $("p").load("new.txt");
+        });
+      });
+    </script>
+  </body>
+</html>

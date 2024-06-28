@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    width: 100vw;
+    height: 5vh;
+    background-color: white;
+    color:black;
+    font-size: 3vh;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+}
+.empty{
+    width: 5vh;
+}
+body{
+    overflow: hidden;
+}
+.snake{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    width: auto;
+    position:absolute;
+}
+.head{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: rgb(1, 1, 7);
+    position: absolute;
+    left: calc(var(--l)*2vw);
+    top: calc(var(--t)*2vw);
+}
+.body{
+    display: flex;
+}
+.cell{
+    left: calc(var(--l)*2vw);
+    top: calc(var(--t)*2vw);
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(20, 20, 241);
+}
+.eye{
+    width: 2vw;
+}
+.eyes{
+    position: absolute;
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+.eye1{
+    top: 0.4vh;
+}
+.eye2{
+    top: 3vh;
+}
+.food{
+    width: 4vh;
+    height: 4vh;
+    background-color: green;
+    border-radius: 2vh;
+    position: absolute;
+}

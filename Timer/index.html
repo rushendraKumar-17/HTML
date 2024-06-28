@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="hours time">
+            <button class="up" data-id="hours"><i class="fa fa-solid fa-caret-up"></i></button>
+            <p class="numHours">00</p>
+            <button class="down" data-id="hours"><i class="fa fa-solid fa-caret-down"></i></button>
+        </div>
+        <div class="colon">:</div>
+        <div class="minutes time">
+            <button class="up" data-id="minutes"><i class="fa fa-solid fa-caret-up"></i></button>
+            <p class="numMinutes">00</p>
+            <button class="down" data-id="minutes"><i class="fa fa-solid fa-caret-down"></i></button>
+        </div>
+        <div class="colon">:</div>
+        <div class="seconds time">
+            <button class="up" data-id="seconds"><i class="fa fa-solid fa-caret-up"></i></button>
+            <p class="numSeconds">00</p>
+            <button class="down" data-id="seconds"><i class="fa fa-solid fa-caret-down"></i></button>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="pause">Pause</button>
+        <button class="continue">Start</button>
+    </div>
+    <div class="audio">
+        <audio src="audio.mp3" controls></audio>
+    </div>
+    <div class="message">
+        <p>Time completed</p>
+        <button class="stop">Stop the timer</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

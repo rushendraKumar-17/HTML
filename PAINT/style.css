@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    overflow: hidden;
+  }
+  .pixel {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .controlPanel {
+    width: 100vw;
+    height: 5vw;
+    background-color: rgb(138, 252, 252);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 2vw;
+    gap: 4vh;
+  }
+  .eraser,
+  .pencil {
+    width: 5vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(222, 183, 240);
+    border-radius: 20%;
+    border: 0.5px solid black;
+  }
+  .selected {
+    border: 2px solid black;
+    background-color: white;
+  }
+  .colorPanel {
+    width: 20vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+  }
+  .color {
+    width: 2vw;
+    height: 2vw;
+    background-color: var(--clr);
+    border: 1px solid black;
+    border-radius: 30%;
+  }
+  .paintArea {
+    width: 100vw;
+    height: 95vw;
+  }

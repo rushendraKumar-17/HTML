@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            cursor: none;
+            background-color: black;
+        }
+        .text{
+            width: 60vw;
+            font-size: 8vw;
+            height: 10vw;
+            /* color: rgb(179, 81, 81); */
+            left: 20vw;
+            top: 10vw;
+            z-index: 2;
+            position: absolute;
+            background-color: transparent;
+        }
+        .text p{
+            z-index: 2;
+        }
+        .light{
+            width: 3vw;
+            height: 3vw;
+            border-radius: 50%;
+            position: absolute;
+            background-color: white;
+            z-index: -1;
+            left: 20vw;
+            top: 20vh;
+            visibility: hidden;
+        }
+        .torch{
+            background: url(torchOff.png);
+            background-size: cover;
+            width: 5vw;
+            height: 5vw;
+            background-color: transparent;
+            position: absolute;
+            border-radius: 50%;
+            z-index: 3;
+        }
+        .shadow{
+            box-shadow: 0px 0px 38px 38px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="torch"></div>
+    <div class="light shadow"></div>
+    <div class="text"><p>Rushendra Kumar</p></div>
+ 
+<script>
+    let light = document.querySelector(".light");
+    let torch = document.querySelector(".torch");
+    window.addEventListener("mousemove",(e)=>{
+        let x = e.clientX;
+        let y = e.clientY;
+        torch.style.top=(y-16)+"px";
+        torch.style.left=x-16+"px";
+        light.style.left=(x+80)+"px";
+        light.style.top=(y-80)+"px"
+    })
+    let text = document.querySelector(".text");
+    window.addEventListener("mousedown",(e)=>{
+        e.preventDefault();
+        light.style.visibility="visible";
+        torch.style.backgroundImage="url(torch.png)"
+    })
+    window.addEventListener("mouseup",()=>{
+        light.style.visibility="hidden";
+        torch.style.backgroundImage="url(torchOff.png)"
+
+    })
+</script> 
+</body>
+</html>
